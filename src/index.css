@@ -1,0 +1,211 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 39 83% 54%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 64%;
+
+    --accent: 39 83% 54%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 39 83% 54%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 39 83% 54%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 39 83% 54%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 95%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 95%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 39 83% 54%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 39 83% 54%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 80%;
+    --input: 0 0% 80%;
+    --ring: 39 83% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter overflow-x-hidden transition-colors duration-200;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-rajdhani font-bold;
+  }
+}
+
+@layer components {
+  .neon-border {
+    @apply border border-neon shadow-[0_0_15px_rgba(236,168,41,0.5)];
+  }
+  
+  .neon-text {
+    @apply text-neon animate-text-glow;
+  }
+  
+  .neon-border-hover {
+    @apply transition-all duration-300 border border-neon hover:shadow-[0_0_20px_rgba(236,168,41,0.7)];
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-neon mb-6 text-center;
+  }
+  
+  .section-subtitle {
+    @apply text-xl max-w-2xl mx-auto text-center mb-12;
+  }
+  
+  .dark .section-subtitle {
+    @apply text-white/80;
+  }
+  
+  .light .section-subtitle {
+    @apply text-gaming-dark/80;
+  }
+  
+  .glass-panel {
+    @apply backdrop-blur-md border rounded-lg;
+  }
+  
+  .dark .glass-panel {
+    @apply bg-white/5 border-white/10;
+  }
+  
+  .light .glass-panel {
+    @apply bg-gaming-dark/5 border-gaming-dark/10;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-[1.02];
+  }
+
+  .button-primary {
+    @apply bg-neon text-gaming-dark font-bold py-3 px-8 rounded-md 
+           shadow-[0_0_15px_rgba(236,168,41,0.5)] transition-all duration-300 
+           hover:shadow-[0_0_25px_rgba(236,168,41,0.8)] hover:scale-105 
+           uppercase tracking-wider text-sm md:text-base;
+  }
+  
+  .button-outline {
+    @apply bg-transparent text-neon border-2 border-neon font-bold py-3 px-8 
+           rounded-md shadow-[0_0_10px_rgba(236,168,41,0.4)] transition-all 
+           duration-300 hover:shadow-[0_0_20px_rgba(236,168,41,0.7)] 
+           hover:bg-neon/10 uppercase tracking-wider text-sm md:text-base;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gaming-dark;
+}
+
+.light ::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gaming-light rounded-full;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  @apply bg-gaming-dark/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neon/70;
+}
+
+/* Scroll reveal animations */
+.reveal {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+
+.from-bottom {
+  transform: translateY(50px);
+}
+
+.from-left {
+  transform: translateX(-50px);
+}
+
+.from-right {
+  transform: translateX(50px);
+}
+
+.reveal.active.from-bottom,
+.reveal.active.from-left,
+.reveal.active.from-right {
+  transform: translate(0);
+}
