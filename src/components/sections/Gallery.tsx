@@ -12,12 +12,20 @@ const Gallery = () => {
       { src: 'src/assets/2.png', alt: '' },
       { src: 'src/assets/3.png', alt: '' },
       { src: 'src/assets/4.png', alt: '' },
+      { src: 'src/assets/5.png', alt: '' },
+      { src: 'src/assets/6.jpg', alt: '' },
+      { src: 'src/assets/7.png', alt: '' },
+      { src: 'src/assets/8.jpg', alt: '' }
     ],
     'wakad': [
       { src: 'https://content3.jdmagicbox.com/v2/comp/mumbai/z2/022pxx22.xx22.230304093327.j9z2/catalogue/next-level-gaming-cafe-mumbai-gaming-console-dealers-mwmidbbhk8.jpg', alt: '' },
-      { src: 'https://images.unsplash.com/photo-1560253023-3ec5d502959f', alt: '' },
+      { src: 'src/assets/wakad2.jpg', alt: '' },
       { src: 'https://t3.ftcdn.net/jpg/01/63/91/94/360_F_163919461_g76Kxgr6Q8oXhlI2xiJT2o0QWI6N0C0W.jpg', alt: '' },
       { src: 'https://t3.ftcdn.net/jpg/04/70/95/42/360_F_470954251_lZGymPRVehkWzscLdr1WUHAcJ7kdzZZt.jpg', alt: '' },
+      { src: 'https://img.freepik.com/free-photo/medium-shot-victorious-gamers-winning_23-2149350009.jpg?t=st=1743342785~exp=1743346385~hmac=3e20712a4ecc475ff7fafeb96fd6fff92d95531ae0f8f81248d0124b4c0bbc43&w=996', alt: '' },
+      { src: 'src/assets/wakad6.jpg', alt: '' },
+      { src: 'src/assets/wakad7.jpg', alt: '' },
+      { src: 'src/assets/wakad8.jpg', alt: '' }
     ],
   };
 

@@ -91,7 +91,9 @@ const Reviews = () => {
                 key={index}
                 onClick={() => setCurrentReview(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  currentReview === index ? 'bg-neon' : 'bg-white/20'
+                  currentReview === index ? 'bg-neon' : 'bg-black/20 dark:bg-white/20'
+
+
                 }`}
                 aria-label={`View review ${index + 1}`}
               />

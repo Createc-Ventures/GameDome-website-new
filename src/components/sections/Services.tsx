@@ -8,7 +8,7 @@ const Services = () => {
   const services = [
     {
       title: "PC Gaming",
-      description: "Experience gaming on top-tier PCs with RTX 4080 GPUs, 240Hz monitors, and premium peripherals.",
+      description: "Experience gaming on top-tier PCs with RTX GPUs, 240Hz monitors, and premium peripherals.",
       icon: Cpu
     },
     {

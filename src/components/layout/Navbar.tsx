@@ -49,7 +49,7 @@ const Navbar = () => {
           <a href="#" className="flex items-center">
             <span className="text-2xl font-rajdhani font-bold neon-text">GAME</span>
             <img 
-              src="/lovable-uploads/92ce9aa4-5432-46a0-83cf-3671ad0cd96a.png" 
+              src="src/assets/gamedome logo.png" 
               alt="GameDome Logo" 
               className="h-8 mx-1 object-contain" 
             />
