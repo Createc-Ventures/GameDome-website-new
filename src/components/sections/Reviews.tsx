@@ -27,7 +27,7 @@ const Reviews = () => {
     {
       name: "Atul Shemdekar",
       rating: 5,
-      review: "Being the Customer for more than 3yrs i can asure its One of the Best Place For Gaming and Chilling..... Pc and Internet Runs very well... Sometimes it might get technical issue...after all its the machine... But problems get solved immediately.... Must visit if you are looking for gaming and chilling with friends.",
+      review: "Being the Customer for more than 3yrs i can asure its One of the Best Place For Gaming and Chilling..... Pc and Internet Runs very well...Must visit if you are looking for gaming and chilling with friends.",
       location: "Viman Nagar"
     }
   ];
@@ -57,7 +57,9 @@ const Reviews = () => {
         </p>
         
         <div className="max-w-4xl mx-auto mt-12 relative reveal from-bottom">
-          <div className="relative glass-panel p-8 md:p-12 rounded-xl">
+        <div className="relative glass-panel p-8 md:p-12 rounded-xl h-72 sm:h-80 md:h-64 lg:h-80">
+
+
             {/* Quote decoration */}
             <div className="absolute -top-6 -left-6 text-6xl text-neon/20 font-serif">"</div>
             <div className="absolute -bottom-6 -right-6 text-6xl text-neon/20 font-serif rotate-180">"</div>

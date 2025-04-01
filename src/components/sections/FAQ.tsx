@@ -13,17 +13,14 @@ const FAQ = () => {
       answer: "GameDome is open daily from 10 AM to 11 PM at both our Viman Nagar and Wakad locations."
     },
     {
-      question: "Do you allow group bookings?",
+      question: "Do you allow bulk bookings?",
       answer: "Yes, we offer group bookings for birthday parties, corporate events, and tournaments. Please contact us at least 48 hours in advance to reserve your slots."
     },
     {
       question: "What payment options are available?",
       answer: "We accept cash, all major credit/debit cards, UPI payments (Google Pay, PhonePe, Paytm), and our own GameDome prepaid cards that offer additional benefits."
     },
-    {
-      question: "Are there membership discounts?",
-      answer: "Yes, we offer several membership tiers with increasing benefits: Bronze, Silver, and Gold. Benefits include discounted rates, priority bookings, and free snacks."
-    },
+    
     {
       question: "Can I bring my own peripherals?",
       answer: "Absolutely! While we provide high-quality gaming peripherals, you're welcome to bring your own keyboard, mouse, headset, or controller for a more personalized experience."
