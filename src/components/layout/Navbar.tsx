@@ -62,7 +62,8 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className={`${theme === 'dark' ? 'text-white/80 hover:text-neon' : 'text-gaming-dark/80 hover:text-neon'} transition-colors font-medium`}
+                className="text-neon hover:text-white dark:hover:text-black transition-colors font-medium"
+
               >
                 {link.name}
               </a>
