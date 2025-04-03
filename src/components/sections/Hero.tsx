@@ -75,7 +75,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 transition-all duration-300"
         style={{
-          backgroundColor: theme === 'dark' ? 'rgba(0, 0, 0, 0.25)' : 'rgba(0, 0, 0, 0.25)',
+          backgroundColor: theme === 'dark' ? 'rgba(0, 0, 0, 0.25)' : 'rgba(0, 0, 0, 0.5)',
         }}
       ></div>
 
