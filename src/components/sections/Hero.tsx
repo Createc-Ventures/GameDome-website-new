@@ -1,12 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useTheme } from '../../contexts/ThemeContext';
 
-// Background images for light and dark themes
-import bgLightLeft from '../../assets/8.jpg';
-import bgLightRight from '../../assets/7.png';
-import bgDarkLeft from '../../assets/6.jpg';
-import bgDarkRight from '../../assets/5.png';
-
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const { theme } = useTheme();
@@ -23,15 +17,12 @@ const Hero = () => {
 
       animationFrameId = requestAnimationFrame(() => {
         heroRef.current?.querySelectorAll('.parallax').forEach((el) => {
-          if (el.tagName === 'H1') return; // Exclude title
-
+          if (el.tagName === 'H1') return;
           const htmlEl = el as HTMLElement;
           const speedX = parseFloat(htmlEl.getAttribute('data-speed-x') || '1');
           const speedY = parseFloat(htmlEl.getAttribute('data-speed-y') || '1');
-
           const moveX = mouseX * moveFactor * speedX;
           const moveY = mouseY * moveFactor * speedY;
-
           htmlEl.style.transform = `translate(${moveX}px, ${moveY}px)`;
         });
       });
@@ -52,46 +43,39 @@ const Hero = () => {
     }
   };
 
-  // Select background images based on theme
-  const bgLeft = theme === 'dark' ? bgDarkLeft : bgLightLeft;
-  const bgRight = theme === 'dark' ? bgDarkRight : bgLightRight;
+  const backgroundColor = theme === 'dark' ? '#000000' : '#FFFFFF';
 
   return (
     <section
       ref={heroRef}
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center"
-      style={{
-        backgroundImage: `
-          linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-          url(${bgLeft}), 
-          url(${bgRight})
-        `,
-        backgroundSize: '50% 100%, 50% 100%',
-        backgroundPosition: 'left, right',
-        backgroundRepeat: 'no-repeat',
-      }}
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      style={{ backgroundColor }}
     >
+      {/* Neon Orbs */}
+      <div className="absolute top-10 left-20 w-24 h-24 rounded-full neon-orb animate-float" style={{ backgroundColor: theme === 'dark' ? '#eca829' : '#eca829' }}></div>
+      <div className="absolute bottom-16 right-24 w-16 h-16 rounded-full neon-orb animate-float-slow" style={{ backgroundColor: theme === 'dark' ? '#eca829' : '#eca829' }}></div>
+      <div className="absolute top-1/3 right-1/3 w-20 h-20 rounded-full neon-orb animate-float" style={{ backgroundColor: theme === 'dark' ? '#eca829' : '#eca829' }}></div>
+
       <div
         className="absolute inset-0 transition-all duration-300"
         style={{
-          backgroundColor: theme === 'dark' ? 'rgba(0, 0, 0, 0.25)' : 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: theme === 'dark' ? 'rgba(0, 0, 0, 0.25)' : 'rgba(0, 0, 0, 0.05)',
         }}
       ></div>
 
       <div className="container mx-auto px-4 z-10 text-center">
         <div className="relative inline-block mb-4">
-          <span className="text-white text-sm md:text-base uppercase tracking-[0.25em] font-medium">
+          <span className={`text-sm md:text-base uppercase tracking-[0.25em] font-medium ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
             Pune's Premier Gaming Destination
           </span>
         </div>
 
-        {/* Title */}
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-rajdhani font-bold mb-6 relative text-white">
+        <h1 className={`text-6xl md:text-7xl lg:text-8xl font-rajdhani font-bold mb-6 relative ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
           GAME<span className="neon-text">DOME</span>
         </h1>
 
-        <p className="text-white text-lg md:text-xl max-w-xl mx-auto mb-10">
+        <p className={`text-lg md:text-xl max-w-xl mx-auto mb-10 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
           The ultimate high-tech gaming café with top-tier equipment, immersive experiences, and competitive thrills.
         </p>
 
